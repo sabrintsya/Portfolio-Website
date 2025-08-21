@@ -2,10 +2,10 @@
       /* Colours */
      --color-text: #2B2B2B;
      --color-primary: #F2337D;
-     --color-secondary: #FFC6D9 ;
-     --color-dark: #6C2B47;
+     --color-secondary: #FF90BB ;
+     --color-third: #FFB5D4;
      --color-bg: #FFF5F8 ;
 
        /* Fonts */
-     --font-robot: "Roboto";
+     --font-roboto: "Roboto";
 }
