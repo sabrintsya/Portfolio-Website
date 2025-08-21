@@ -88,5 +88,30 @@
     margin-top: -10px;
 }
 
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .journeyImage {
+        width: 100%; 
+        max-width: 400px; 
+    }
+
+    .journeyItems {
+        max-width: 100%; 
+        padding: 0 10px;
+    }
+
+    .journeyItem {
+        flex-direction: column;
+       
+    }
+
+    .title {
+        text-align:center;
+    }
+}
 
 
