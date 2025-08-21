@@ -121,6 +121,51 @@
     z-index: 0;
 }
 
+/* 📱 Tablet */
+@media screen and (max-width: 1024px) {
+    .title {
+        font-size: 48px;
+        text-align: left;
+    }
+    .description {
+        font-size: 22px;
+        text-align: left;
+    }
+    .contactBtn {
+        font-size: 20px;
+        padding: 14px 24px;
+    }
+    .heroImg {
+        width: 50%;
+    }
+}
 
-
+/* 📱 Mobile */
+@media screen and (max-width: 830px) {
+    .container {
+        flex-direction: column-reverse;
+        gap: 30px;
+        align-items: flex-start;
+    }
+    .content {
+        max-width: 100%;
+        align-items: flex-start;
+    }
+    .title {
+        font-size: 60px;
+        text-align: left;
+    }
+    .description {
+        font-size: 30px;
+        text-align: left;
+    }
+    .contactBtn {
+        font-size: 20px;
+        padding: 12px 20px;
+    }
+    .heroImg {
+        width: 70%;
+        
+    }
+}
 
