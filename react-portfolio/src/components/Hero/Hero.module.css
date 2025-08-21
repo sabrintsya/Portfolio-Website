@@ -9,6 +9,7 @@
     margin-left: 8% ;
     margin-right: 8%;
     z-index: 1;
+    gap: 40px;
 }
 
 .content {
@@ -17,28 +18,42 @@
     align-items: flex-start;
     max-width: 50%;
     z-index: 1;
+    line-height: 1.5;
 }
 
 .title {
     font-size: 68px;
     color: var(--color-primary);
     font-weight: 800;
-    margin-bottom: 33px;
+    margin-bottom: 40px;
     font-family: var(--font-roboto);
+    cursor: pointer;  
+}
+
+.title:hover {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .description {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 700;
     font-family: var(--font-roboto);
     color: var(--color-text);
     margin-bottom: 52px;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+.description:hover {
+    color: var(--color-primary);
 }
 
 .contactBtn {
     text-decoration: none;
     background-color: var(--color-primary);
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 600;
     font-family: var(--font-roboto);
     color: var(--color-bg);
@@ -49,8 +64,8 @@
 }
 
 .contactBtn:hover {
-  background-color: var(--color-secondary); 
-  transform: scale(1.05); 
+  background-color: var(--color-accent); 
+  transform: scale(1.07); 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
 }
 
@@ -59,6 +74,7 @@
     z-index: 1;
     border-radius: 50%;
     animation-name: floating;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); 
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
