@@ -5,7 +5,7 @@ import styles from "./Hero.module.css";
 
 export const Hero = () => {
     return (
-        <section className={styles.container}>
+        <section className={styles.container} id="home">
             <div className={styles.content}>
                 <h1 className={styles.title} >Design,with Purpose.</h1>
                 <p className={styles.description}> Not just usable.<br />
