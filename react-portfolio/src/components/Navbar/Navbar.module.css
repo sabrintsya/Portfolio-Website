@@ -112,6 +112,7 @@
         padding: 24px 33px;
         height: 30%;
         box-shadow: 0 0 4px 0 rgb(0, 0, 0, 0.25);
+        
     }
 
     .menuItems a {
@@ -134,8 +135,7 @@
         z-index: 1;
     }
 
-    .menu.scrolled {
-    position: absolute;
+   .menu.scrolled {
     top: auto;
     left: auto;
     transform: none;
@@ -143,6 +143,6 @@
     border-radius: 0;
     padding: 0;
     box-shadow: none;
-  }
+}
 
 }

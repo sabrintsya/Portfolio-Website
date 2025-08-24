@@ -1,5 +1,6 @@
 
 import styles from "./App.module.css";
+import { Contact } from "./components/Contact/Contact";
 import { Hero } from "./components/Hero/Hero";
 import { Journey } from "./components/Journey/Journey";
 import { Navbar } from "./components/Navbar/Navbar";
@@ -12,6 +13,7 @@ function App() {
     <Hero />
     <Journey />
     <Portfolio />
+    <Contact />
   </div>;
 };
 
