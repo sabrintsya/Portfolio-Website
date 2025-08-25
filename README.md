@@ -2,17 +2,15 @@
 
 ---
 
-### 🔹 Template **README.md** untuk repo kamu
-
-Aku buatkan dengan gaya aesthetic + clean, cocok buat portfolio project:
-
 ```markdown
 # 🌸 BinPortfolio
 
-Welcome to my personal portfolio website!  
-This project showcases my **UI/UX design works** and **frontend development projects**, built with **React + Vite** and deployed on **Vercel**.
+This is my **personal portfolio website** – designed in **Figma**, built with **React + Vite**, and deployed on **Vercel**.  
+It showcases my works as a **UI/UX Designer** and **Frontend Developer**.
 
-🔗 **Live Demo:** [binportfolio.vercel.app](https://binportfolio.vercel.app)
+🔗 **Live Website:** [binportfolio.vercel.app](https://binportfolio.vercel.app)  
+🎨 **Figma Design:** [View on Figma](https://www.figma.com/design/q6OkS2gqAchHprWA0jwZNj/Website-Portfolio?node-id=0-1&t=7Ymkr2bSO6sXa37m-1)  
+✍️ **Case Study (Medium):** [Read on Medium](https://medium.com/@sabrintsya/xxxx)  
 
 ---
 
@@ -76,12 +74,12 @@ Here’s a sneak peek of my portfolio:
 
 ## 👩‍💻 About Me
 
-Hi! I’m **Sabrintya (Bina)** 🌸
+Hi! I’m **Sabrina Natasya Bilbina (Bina)** 🌸
 A passionate **UI/UX Designer** and **Frontend Developer** who loves building user-friendly and aesthetic digital experiences.
 
 * 🌱 Currently exploring better UX practices
 * 💼 Open for freelance or collaboration
-* 📫 Reach me: [LinkedIn](https://www.linkedin.com) | [Email](mailto:sabrina@example.com)
+* 📫 Reach me: [LinkedIn](https://www.linkedin.com/in/sabrintsya-/) | [Email](mailto:sabrina.bina.binbin@gmail.com)
 
 ---
 
