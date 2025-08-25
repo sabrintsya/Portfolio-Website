@@ -31,17 +31,22 @@ It showcases my works as a **UI/UX Designer** and **Frontend Developer**.
 
 ---
 
+Betul 👍 itu sekarang masih kelihatan **inline biasa**, makanya jadi berantakan. Biar rapi di README GitHub, kamu harus bungkus struktur project pakai **fence code block** (\`\`\`) dan tentuin formatnya.
+
+Ini contoh yang rapi buat bagian kamu tadi:
+
+```markdown
 ## 📂 Project Structure
-```
 
 Portfolio-Website/
-├── public/         # Static assets
-├── src/            # Main source code
-│   ├── components/ # Reusable UI components
-│   ├── pages/      # Page sections
-│   ├── assets/     # Images & icons
-├── package.json    # Dependencies & scripts
-├── vite.config.js  # Vite configuration
+├── public/             # Static assets
+├── src/                # Main source code
+│   ├── components/     # Reusable UI components
+│   ├── pages/          # Page sections
+│   ├── assets/         # Images & icons
+├── package.json        # Project dependencies & scripts
+├── vite.config.js      # Vite configuration
+└── README.md           # Project documentation
 
 ---
 
