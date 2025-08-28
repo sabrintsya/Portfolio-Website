@@ -1,4 +1,4 @@
-> `🚀 Personal Portfolio Website – Showcasing my UI/UX Design projects and Frontend Development works.`
+<img width="1920" height="1080" alt="Website is a web-based digital platform designed to empower Indonesian women by providing access to beauty training, enhancing makeup skills, and supporting small beauty business development  (2)" src="https://github.com/user-attachments/assets/3c7112f2-2ac2-40eb-8813-a77046db20c1" />> `🚀 Personal Portfolio Website – Showcasing my UI/UX Design projects and Frontend Development works.`
 
 ---
 
@@ -9,7 +9,7 @@ It showcases my works as a **UI/UX Designer** and **Frontend Developer**.
 
 🔗 **Live Website:** [binportfolio.vercel.app](https://binportfolio.vercel.app)  
 🎨 **Figma Design:** [View on Figma](https://www.figma.com/design/q6OkS2gqAchHprWA0jwZNj/Website-Portfolio?node-id=0-1&t=7Ymkr2bSO6sXa37m-1)  
-✍️ **Case Study (Medium):** [Read on Medium](https://medium.com/@sabrintsya/xxxx)  
+✍️ **Case Study (Medium):** [Read on Medium](https://medium.com/@sabrinatsya/case-study-designing-and-building-my-first-personal-portfolio-website-d3e1a6618612)  
 
 ---
 
@@ -65,12 +65,11 @@ npm run dev
 ---
 
 ## 📸 Preview
-
 Here’s a sneak peek of my portfolio:
 
-![Portfolio Screenshot](./preview.png)
+![Portfolio Screenshot](<img width="1920" height="1080" alt="Website is a web-based digital platform designed to empower Indonesian women by providing access to beauty training, enhancing makeup skills, and supporting small beauty business development  (2)" src="https://github.com/user-attachments/assets/aff837dd-795c-4503-859c-cb6b5af3f214" />
+)
 
----
 
 ## 👩‍💻 About Me
 
