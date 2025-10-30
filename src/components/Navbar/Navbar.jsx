@@ -23,7 +23,7 @@ export const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <a className={styles.title} href="/">
-        Meet bina👋
+        🪷 Sabrina Natasya Bilbina
       </a>
       <div className={`${styles.menu} ${scrolled ? styles.scrolled : ""}`}  >
         <img className={styles.menuBtn}
@@ -39,9 +39,6 @@ export const Navbar = () => {
           onClick={() => setMenuOpen(false)}>
           <li>
             <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#journey">Journey</a>
           </li>
           <li>
             <a href="#portfolio">Portfolio</a>

@@ -28,5 +28,16 @@
 .description{
     margin-bottom: 40px; 
     margin-top: 20px;
+    font-weight: 400;
+}
+
+.header {
+  font-size: 1rem;               
+  font-weight: 500;              
+  letter-spacing: 2px;          
+  text-transform: uppercase;     
+  color: var(--color-secondary);                         
+  margin-bottom: 8px;          
+  opacity: 0.8;                  
 }
 

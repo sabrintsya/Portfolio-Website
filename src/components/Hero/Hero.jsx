@@ -7,7 +7,7 @@ export const Hero = () => {
     return (
         <section className={styles.container} id="home">
             <div className={styles.content}>
-                <h1 className={styles.title} >Design,with Purpose.</h1>
+                <h1 className={styles.title} >Design, with Purpose.</h1>
                 <p className={styles.description}> Not just usable.<br />
                     But joyful.<br />
                     Not just beautiful.<br />
@@ -17,7 +17,7 @@ export const Hero = () => {
                     Get to Know Me
                 </a>
             </div>
-            <img src={getImageUrl("hero/heroImage.png")} alt="hero image sabrintsya" className={styles.heroImg} />
+            <img src={getImageUrl("hero/Picture.jpg")} alt="hero image sabrintsya" className={styles.heroImg} />
             <div className={styles.topBlur} />
             <div className={styles.bottomBlur} />
             
