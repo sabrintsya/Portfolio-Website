@@ -4,6 +4,32 @@ import { PortfolioCard } from "./PortfolioCard";
 
 export const Portfolio = () => {
   const portfolio = [
+     {
+      id: "kparkir",
+      title: "K’Parkir",
+      imageSrc: "portfolio/K'parkir.png",
+      description: "A smart parking app designed to reduce time spent searching for parking in Jakarta. K’Parkir integrates real-time availability, navigation, to improve urban mobility and reduce illegal parking.",
+      demo: "https://www.figma.com/design/tgp09Q84VoR5j3PSiz56OG/UI-Design-K%E2%80%99Parkir--TEAM-4FA-?node-id=0-1&t=0kYNLicYsYJAGJzN-1",
+      source: "https://www.canva.com/design/DAG2sQv1ZgY/mg5SR5hQ9SBsEZ4eeCfjfg/edit?utm_content=DAG2sQv1ZgY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+      type: "case-study"
+    },
+    {
+      id: "reqtify",
+      title: "Reqtify",
+      imageSrc: "portfolio/Spotify.png",
+      description: "Redesigning Spotify Experience  : Spotify ReqTify - Optimizing Content Availability on Spotif This project was executed as part of the Startup Campus UI/UX Design 2025 program. ",
+      demo: "https://www.figma.com/board/QMwPmcta4QEIcOhLQMol7V/Spotify-Research---Team-1?node-id=0-1&t=9l5QqLpsoWVQurpV-1",
+      source: "https://www.figma.com/design/CKFhVcvDKB5PxwtMAn3Aea/Team-1---Prototype?node-id=0-1&t=k9KKeZfPhl5oNao3-1",
+      type: "case-study"
+    },
+    {
+     id: "ui-ux-differences",
+     title: "Differences Between UI & UX",
+     imageSrc: "portfolio/A-1.1 Sabrina Natasya Bilbina.png",
+     description: "An analytical presentation exploring the fundamental differences between User Interface and User Experience through real-world product observations, scoring 91/100.",
+     demo: "https://www.canva.com/design/DAGugx-Rkg0/1pvKg5o7WFzKJLHIEWBiyA/edit?utm_content=DAGugx-Rkg0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+     type: "presentation"
+    },
     {
       id: "beauty-preneur",
       title: "Beauty Preneur",
@@ -44,7 +70,7 @@ export const Portfolio = () => {
       id: "katik",
       title: "Katik",
       imageSrc: "portfolio/katik.png",
-      description: "A simple web app for quick and accurate geometry calculations. it helps students and learners practice formulas efficiently while improving their understanding of basic math concepts.",
+      description: "A web app for accurate geometry calculations. it helps student practice formulas efficiently while improving their understanding of basic math concepts.",
       demo: "https://revou-fundamental-course.github.io/25-dec-23-sabrintsya.github.io/",
       source: "https://github.com/revou-fundamental-course/25-dec-23-sabrintsya.github.io",
       type: "github" 
@@ -53,7 +79,7 @@ export const Portfolio = () => {
       id: "furnihaven",
       title: "Furnihaven",
       imageSrc: "portfolio/furnihaven.png",
-      description: "A furniture landing page that showcases modern and functional designs. Built to highlight simple, elegant, and space saving pieces for daily living, while emphasizing comfort.",
+      description: "A furniture landing page that showcases modern and functional designs. space saving pieces for daily living, while emphasizing comfort.",
       demo: "https://furnihaven.netlify.app/",
       source: "https://github.com/sabrintsya/Furnihaven-Landingpage",
       type: "github" 
@@ -76,6 +102,7 @@ export const Portfolio = () => {
       source: "https://github.com/sabrintsya/bookshelfapp",
       type: "github" 
     }
+     
   ];
 
   return (

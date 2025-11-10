@@ -44,6 +44,30 @@ export const PortfolioCard = ({
     );
   };
 
+  if (type === "presentation") {
+    return (
+      <div className={styles.container}>
+        <img
+          src={getImageUrl(imageSrc)}
+          alt={`Image of ${title}`}
+          className={styles.image}
+        />
+        <h3 className={styles.title}>{title}</h3>
+        <p className={styles.description}>{description}</p>
+        <div className={styles.links}>
+          <a 
+            href={demo} 
+            className={styles.link}
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            View Presentation
+          </a>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.container}>
       <img
