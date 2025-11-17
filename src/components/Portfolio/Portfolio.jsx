@@ -61,7 +61,7 @@ export const Portfolio = () => {
       id: "bmi-calculator",
       title: "BMI Calculator",
       imageSrc: "portfolio/bmi.png",
-      description: "A lightweight tool to calculate Body Mass Index (BMI) instantly. It provides clear results with categorized health ranges, making it easier for users to understand their wellness levels.",
+      description: "A lightweight tool to calculate Body Mass Index (BMI) instantly. It provides clear results with categorized health ranges, for users to understand their wellness levels.",
       demo: "https://bmitor.netlify.app/",
       source: "https://github.com/sabrintsya/BMI-Calculator-Repo",
       type: "github" 
