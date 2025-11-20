@@ -44,7 +44,7 @@ const CaseStudy = () => {
         <h2>2. My Role & Team Composition</h2>
         <div className={styles.imageWithCaption}>
           <img
-            src={getImageUrl("casestudy/reqtify-team.jpg")}
+            src={getImageUrl("casestudy/reqtify-team.JPG")}
             alt="Team 1 structure and collaboration process"
             className={styles.contentImage}
           />
@@ -467,7 +467,7 @@ const CaseStudy = () => {
             <h2>2.My Role in the Project</h2>
             <div className={styles.imageWithCaption}>
               <img
-                src={getImageUrl("casestudy/kparkir-team.jpg")}
+                src={getImageUrl("casestudy/reqtify-team.JPG")}
                 alt="Team 4FA structure and collaboration process"
                 className={styles.contentImage}
               />
