@@ -25,7 +25,7 @@ export const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      
+
 
       <div className={`${styles.menu} ${scrolled ? styles.scrolled : ""}`}  >
         <img className={styles.menuBtn}
@@ -37,25 +37,23 @@ export const Navbar = () => {
           alt="menu-button"
           onClick={() => setMenuOpen(!menuOpen)}
         />
-        <ul className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
-          onClick={() => setMenuOpen(false)}>
-          <li>
+        <ul className={`${styles.menuItems} ${menuOpen ? styles.menuOpen : ""}`}>
+          <li onClick={() => setMenuOpen(false)}>
             <Link to="/">Home</Link>
           </li>
-          <li>
-            <Link to="/portfolio">All work</Link>
+          <li onClick={() => setMenuOpen(false)}>
+            <Link to="/portfolio">All Work</Link>
           </li>
-          <li>
+          <li onClick={() => setMenuOpen(false)}>
             <a
               href={cvFile}
               download="Sabrina_Natasya_Bilbina_UI_UX_Designer_CV.pdf"
-              className={styles.resume}
             >
               Resume
             </a>
           </li>
-
         </ul>
+
       </div>
     </nav>
   );

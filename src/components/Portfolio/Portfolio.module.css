@@ -57,4 +57,70 @@
 }
 
 
+.filters {
+  display: flex;
+  gap: 14px;
+  margin-top: 48px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  font-family: inherit;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  padding: 8px 20px;
+  border-radius: 999px;
+
+  background: transparent;
+  border: 1.5px solid var(--color-secondary);
+  color: var(--color-text);
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+  opacity: 0.7;
+}
+
+.filters button:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+
+.active {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+
+  .list {
+    gap: 4rem;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .filters {
+    gap: 10px;
+    margin-top: 32px;
+  }
+
+  .filters button {
+    font-size: 0.75rem;
+    padding: 6px 16px;
+  }
+}
+
+
 

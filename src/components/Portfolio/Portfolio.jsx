@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Portfolio.module.css";
 import { PortfolioCard } from "./PortfolioCard";
 import { Link } from "react-router-dom";
@@ -7,15 +7,19 @@ export const Portfolio = ({ showAll = false }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const [activeFilter, setActiveFilter] = useState("all");
+
   const portfolio = [
-     {
+    {
       id: "kparkir",
       title: "K’Parkir",
       imageSrc: "portfolio/K'parkir.png",
       description: "A smart parking app designed to reduce time spent searching for parking in Jakarta. K’Parkir integrates real-time availability, navigation, to improve urban mobility and reduce illegal parking.",
       demo: "https://www.figma.com/design/tgp09Q84VoR5j3PSiz56OG/UI-Design-K%E2%80%99Parkir--TEAM-4FA-?node-id=0-1&t=0kYNLicYsYJAGJzN-1",
       source: "https://www.canva.com/design/DAG2sQv1ZgY/mg5SR5hQ9SBsEZ4eeCfjfg/edit?utm_content=DAG2sQv1ZgY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
-      type: "case-study"
+      type: "case-study",
+      role: "uiux"
     },
     {
       id: "reqtify",
@@ -24,15 +28,17 @@ export const Portfolio = ({ showAll = false }) => {
       description: "Redesigning Spotify Experience  : Spotify ReqTify - Optimizing Content Availability on Spotif This project was executed as part of the Startup Campus UI/UX Design 2025 program. ",
       demo: "https://www.figma.com/board/QMwPmcta4QEIcOhLQMol7V/Spotify-Research---Team-1?node-id=0-1&t=9l5QqLpsoWVQurpV-1",
       source: "https://www.figma.com/design/CKFhVcvDKB5PxwtMAn3Aea/Team-1---Prototype?node-id=0-1&t=k9KKeZfPhl5oNao3-1",
-      type: "case-study"
+      type: "case-study",
+      role: "uiux"
     },
     {
-     id: "ui-ux-differences",
-     title: "Differences Between UI & UX",
-     imageSrc: "portfolio/A-1.1 Sabrina Natasya Bilbina.png",
-     description: "An analytical presentation exploring the fundamental differences between User Interface and User Experience through real-world product observations, scoring 91/100.",
-     demo: "https://www.canva.com/design/DAGugx-Rkg0/1pvKg5o7WFzKJLHIEWBiyA/edit?utm_content=DAGugx-Rkg0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
-     type: "presentation"
+      id: "ui-ux-differences",
+      title: "Differences Between UI & UX",
+      imageSrc: "portfolio/A-1.1 Sabrina Natasya Bilbina.png",
+      description: "An analytical presentation exploring the fundamental differences between User Interface and User Experience through real-world product observations, scoring 91/100.",
+      demo: "https://www.canva.com/design/DAGugx-Rkg0/1pvKg5o7WFzKJLHIEWBiyA/edit?utm_content=DAGugx-Rkg0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+      type: "presentation",
+      role: "uiux"
     },
     {
       id: "beauty-preneur",
@@ -41,7 +47,8 @@ export const Portfolio = ({ showAll = false }) => {
       description: "A platform that provides makeup training and beauty sessions to help women gain skills and access job opportunities. Includes a budgeting tool to find the right price for makeup needs.",
       demo: "https://beauty-preneur-official.netlify.app/",
       source: "https://medium.com/@sabrinatsya/empowering-underserved-women-through-ux-case-study-of-beautypreneur-8d36b0b564ce",
-      type: "case-study" 
+      type: "case-study",
+      role: "uiux, frontend developer"
     },
     {
       id: "sibi",
@@ -50,7 +57,8 @@ export const Portfolio = ({ showAll = false }) => {
       description: "A mental health companion for Indonesian mothers during pregnancy and postpartum. Features anonymous chat, bonding classes, and access to local resources.",
       demo: "https://www.figma.com/design/xQs3X179UkOsKJBj0axGhP/Basic-Course---4.2-Landing-Page-Design-Challenge--Sabrina-Natasya-Bilbina-?node-id=2009-1322&t=jCoNeCbhKa2sqkOg-1",
       source: "https://medium.com/design-bootcamp/case-study-ux-designing-sibi-a-mental-health-companion-for-indonesian-mothers-5e27043eb9a2",
-      type: "case-study" 
+      type: "case-study",
+      role: "uiux"
     },
     {
       id: "hermoney",
@@ -59,7 +67,8 @@ export const Portfolio = ({ showAll = false }) => {
       description: "A financial education platform designed for women to learn inclusively and affordably. Focused on accessibility, empowerment, and breaking financial barriers.",
       demo: "https://hermoney.netlify.app/",
       source: "https://medium.com/@sabrinatsya/breaking-the-cycle-a-ux-case-study-on-women-poverty-and-financial-education-a0e1b8ef808a",
-      type: "case-study"
+      type: "case-study",
+      role: "uiux, frontend developer"
     },
     {
       id: "bmi-calculator",
@@ -68,7 +77,8 @@ export const Portfolio = ({ showAll = false }) => {
       description: "A lightweight tool to calculate Body Mass Index (BMI) instantly. It provides clear results with categorized health ranges, for users to understand their wellness levels.",
       demo: "https://bmitor.netlify.app/",
       source: "https://github.com/sabrintsya/BMI-Calculator-Repo",
-      type: "github" 
+      type: "github",
+      role: "frontend developer"
     },
     {
       id: "katik",
@@ -77,7 +87,8 @@ export const Portfolio = ({ showAll = false }) => {
       description: "A web app for accurate geometry calculations. it helps student practice formulas efficiently while improving their understanding of basic math concepts.",
       demo: "https://revou-fundamental-course.github.io/25-dec-23-sabrintsya.github.io/",
       source: "https://github.com/revou-fundamental-course/25-dec-23-sabrintsya.github.io",
-      type: "github" 
+      type: "github",
+      role: "frontend developer"
     },
     {
       id: "furnihaven",
@@ -86,7 +97,8 @@ export const Portfolio = ({ showAll = false }) => {
       description: "A furniture landing page that showcases modern and functional designs. space saving pieces for daily living, while emphasizing comfort.",
       demo: "https://furnihaven.netlify.app/",
       source: "https://github.com/sabrintsya/Furnihaven-Landingpage",
-      type: "github" 
+      type: "github",
+      role: "frontend developer"
     },
     {
       id: "sourcenews",
@@ -95,7 +107,8 @@ export const Portfolio = ({ showAll = false }) => {
       description: "A responsive landing page for a digital news platform. Designed to provide quick access to the latest headlines and categorized information.",
       demo: "https://sourcnews.netlify.app/",
       source: "https://github.com/sabrintsya/SourceNews",
-      type: "github" 
+      type: "github",
+      role: "frontend developer"
     },
     {
       id: "bookshelf-app",
@@ -104,13 +117,22 @@ export const Portfolio = ({ showAll = false }) => {
       description: "A web app to manage personal reading lists efficiently. Users can add, track, and organize books they have read or plan to read.",
       demo: "https://webbookshelf.netlify.app/",
       source: "https://github.com/sabrintsya/bookshelfapp",
-      type: "github" 
+      type: "github",
+      role: "frontend developer"
     }
-     
+
   ];
 
-   const featured = portfolio.slice(0, 3);
-  const displayed = showAll ? portfolio : featured;
+  const filteredPortfolio =
+    activeFilter === "all"
+      ? portfolio
+      : portfolio.filter((item) =>
+        item.role.includes(activeFilter)
+      );
+
+  const featured = filteredPortfolio.slice(0, 3);
+  const displayed = showAll ? filteredPortfolio : featured;
+
 
   return (
     <section className={styles.container}>
@@ -121,6 +143,34 @@ export const Portfolio = ({ showAll = false }) => {
         possibilities. I take those insights and shape them into wireframes,
         prototypes, and finally, real experiences.
       </h4>
+
+      {showAll && (
+        <div className={styles.filters}>
+          <button
+            className={`${styles.filterButton} ${activeFilter === "all" ? styles.active : ""
+              }`}
+            onClick={() => setActiveFilter("all")}
+          >
+            All Work
+          </button>
+
+          <button
+            className={`${styles.filterButton} ${activeFilter === "uiux" ? styles.active : ""
+              }`}
+            onClick={() => setActiveFilter("uiux")}
+          >
+            UI/UX Design
+          </button>
+
+          <button
+            className={`${styles.filterButton} ${activeFilter === "frontend" ? styles.active : ""
+              }`}
+            onClick={() => setActiveFilter("frontend")}
+          >
+            Frontend Developer
+          </button>
+        </div>
+      )}
 
       <div className={styles.list}>
         {displayed.map((item) => (
