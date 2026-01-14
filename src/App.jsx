@@ -1,27 +1,35 @@
-import styles from "./App.module.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Contact } from "./components/Contact/Contact";
-import { Hero } from "./components/Hero/Hero";
 import { Navbar } from "./components/Navbar/Navbar";
+import { Hero } from "./components/Hero/Hero";
 import { Portfolio } from "./components/Portfolio/Portfolio";
-import CaseStudy from "./components/CaseStudy/CaseStudy"; // <- HAPUS { } dan ganti jadi default import
+import { Contact } from "./components/Contact/Contact";
+import CaseStudy from "./components/CaseStudy/CaseStudy";
+import AllWorks from "./components/pages/AllWorks";
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={
+      <Navbar />
+
+      <Routes>
+        {/* Home */}
+        <Route
+          path="/"
+          element={
             <>
               <Hero />
               <Portfolio />
               <Contact />
             </>
-          } />
-          <Route path="/case-study/:projectId" element={<CaseStudy />} />
-        </Routes>
-      </div>
+          }
+        />
+
+        {/* All Work Page */}
+        <Route path="/portfolio" element={<AllWorks />} />
+
+        {/* Case Study */}
+        <Route path="/case-study/:projectId" element={<CaseStudy />} />
+      </Routes>
     </Router>
   );
 }

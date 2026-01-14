@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
 import { getImageUrl } from "../../utils";
 
+import { Link } from "react-router-dom";
+import cvFile from "../../../assets/cv/Sabrina Natasya Bilbina_UI_UX Designer_CV.pdf";
+
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -22,9 +25,8 @@ export const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <a className={styles.title} href="/">
-        🪷 Sabrina Natasya Bilbina
-      </a>
+      
+
       <div className={`${styles.menu} ${scrolled ? styles.scrolled : ""}`}  >
         <img className={styles.menuBtn}
           src={
@@ -38,14 +40,21 @@ export const Navbar = () => {
         <ul className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
           onClick={() => setMenuOpen(false)}>
           <li>
-            <a href="#home">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#portfolio">Portfolio</a>
+            <Link to="/portfolio">All work</Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a
+              href={cvFile}
+              download="Sabrina_Natasya_Bilbina_UI_UX_Designer_CV.pdf"
+              className={styles.resume}
+            >
+              Resume
+            </a>
           </li>
+
         </ul>
       </div>
     </nav>

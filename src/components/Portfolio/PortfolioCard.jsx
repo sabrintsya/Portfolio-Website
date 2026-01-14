@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./PortfolioCard.module.css";
 import { getImageUrl } from "../../utils";
@@ -19,74 +18,43 @@ export const PortfolioCard = ({
           View Case Study
         </button>
       );
-    } else if (type === "github") {
+    }
+
+    if (type === "github") {
       return (
-        <a 
-          href={source} 
-          className={styles.link}
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
+        <a href={source} className={styles.link} target="_blank">
           Source Code
         </a>
       );
     }
 
-    return (
-      <a 
-        href={source} 
-        className={styles.link}
-        target="_blank" 
-        rel="noopener noreferrer"
-      >
-        View Details
-      </a>
-    );
+    if (type === "presentation") {
+      return (
+        <a href={demo} className={styles.link} target="_blank">
+          View Presentation
+        </a>
+      );
+    }
+
+    return null;
   };
 
-  if (type === "presentation") {
-    return (
-      <div className={styles.container}>
-        <img
-          src={getImageUrl(imageSrc)}
-          alt={`Image of ${title}`}
-          className={styles.image}
-        />
+  return (
+    <div className={styles.row}>
+      <div className={styles.left}>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
+
         <div className={styles.links}>
-          <a 
-            href={demo} 
-            className={styles.link}
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            View Presentation
+          <a href={demo} className={styles.primary} target="_blank">
+            Demo
           </a>
+          {renderSecondButton()}
         </div>
       </div>
-    );
-  }
 
-  return (
-    <div className={styles.container}>
-      <img
-        src={getImageUrl(imageSrc)}
-        alt={`Image of ${title}`}
-        className={styles.image}
-      />
-      <h3 className={styles.title}>{title}</h3>
-      <p className={styles.description}>{description}</p>
-      <div className={styles.links}>
-        <a 
-          href={demo} 
-          className={styles.link}
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          Demo
-        </a>
-        {renderSecondButton()}
+      <div className={styles.right}>
+        <img src={getImageUrl(imageSrc)} alt={title} className={styles.image} />
       </div>
     </div>
   );

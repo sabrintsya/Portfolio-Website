@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Portfolio.module.css";
 import { PortfolioCard } from "./PortfolioCard";
+import { Link } from "react-router-dom";
 
-export const Portfolio = () => {
+export const Portfolio = ({ showAll = false }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const portfolio = [
      {
       id: "kparkir",
@@ -105,16 +109,32 @@ export const Portfolio = () => {
      
   ];
 
+   const featured = portfolio.slice(0, 3);
+  const displayed = showAll ? portfolio : featured;
+
   return (
-    <section className={styles.container} id="portfolio">
+    <section className={styles.container}>
       <p className={styles.header}>My Selected Works</p>
       <h2 className={styles.title}>From Idea to Product</h2>
-      <h4 className={styles.description}>For me, every product begins with listening to users, to problems, to possibilities. I take those insights and shape them into wireframes, prototypes, and finally, real experiences. It's not just about making things look pretty, but about building something people enjoy and find useful.</h4>
-      <div className={styles.portfolio}>
-        {portfolio.map((portfolio, id) => {
-          return <PortfolioCard key={id} portfolio={portfolio} />;
-        })}
+      <h4 className={styles.description}>
+        For me, every product begins with listening to users, to problems, to
+        possibilities. I take those insights and shape them into wireframes,
+        prototypes, and finally, real experiences.
+      </h4>
+
+      <div className={styles.list}>
+        {displayed.map((item) => (
+          <PortfolioCard key={item.id} portfolio={item} />
+        ))}
       </div>
+
+      {!showAll && (
+        <div className={styles.allWorkWrapper}>
+          <Link to="/portfolio" className={styles.allWork}>
+            View All Work →
+          </Link>
+        </div>
+      )}
     </section>
   );
 };

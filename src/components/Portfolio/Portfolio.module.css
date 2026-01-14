@@ -7,15 +7,13 @@
   margin-right: 10%;
 }
 
-.portfolio {
-  margin-top: 37px;
+.list {
   display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;   
-  justify-content: center;
-  gap: 20px;              
-  width: 100%;
+  flex-direction: column;
+  gap: 6rem;
+  margin-top: 80px;
 }
+
 
 .title {
   font-size: 35px;
@@ -40,4 +38,23 @@
   margin-bottom: 8px;          
   opacity: 0.8;                  
 }
+
+.allWorkWrapper {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.allWork {
+  font-size: 1rem;
+  text-transform: uppercase;
+  position: relative;
+  border: 2px solid var(--color-secondary);
+  color: var(--color-primary);
+  background: transparent;
+  border-radius: 100px;
+  padding: 10px 24px;
+  text-decoration: none;
+}
+
+
 
