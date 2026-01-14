@@ -45,6 +45,10 @@ export const Navbar = () => {
             <Link to="/portfolio">All Work</Link>
           </li>
           <li onClick={() => setMenuOpen(false)}>
+  <Link to="/about">About</Link>
+</li>
+
+          <li onClick={() => setMenuOpen(false)}>
             <a
               href={cvFile}
               download="Sabrina_Natasya_Bilbina_UI_UX_Designer_CV.pdf"

@@ -945,6 +945,7 @@ const CaseStudy = () => {
       )
     }
   };
+  
   const project = caseStudies[projectId];
 
   if (!project) {
@@ -991,7 +992,9 @@ const CaseStudy = () => {
         </div>
       </div>
     </div>
+    
   );
+
 };
 
 export default CaseStudy;

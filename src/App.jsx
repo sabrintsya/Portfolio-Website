@@ -5,6 +5,7 @@ import { Portfolio } from "./components/Portfolio/Portfolio";
 import { Contact } from "./components/Contact/Contact";
 import CaseStudy from "./components/CaseStudy/CaseStudy";
 import AllWorks from "./components/pages/AllWorks";
+import  About  from "./components/About/About";
 
 function App() {
   return (
@@ -27,8 +28,11 @@ function App() {
         {/* All Work Page */}
         <Route path="/portfolio" element={<AllWorks />} />
 
+        <Route path="/about" element={<About />} />
+
         {/* Case Study */}
         <Route path="/case-study/:projectId" element={<CaseStudy />} />
+        
       </Routes>
     </Router>
   );
