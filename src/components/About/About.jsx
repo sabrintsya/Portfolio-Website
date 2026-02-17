@@ -25,15 +25,15 @@ const About = () => {
                 <p className={styles.lead}>
                     I didn’t start my journey in design by drawing beautiful screens.
                     I started by trying to understand people.   </p>
-                    <p>From manufacturing floors to digital products, I learned early that systems only work when they respect human behavior. That mindset led me to UI/UX design — a space where empathy, logic, and creativity meet to solve real problems.
+                    <p>From manufacturing floors to digital products, I learned early that systems only work when they respect human behavior. That mindset led me to UI/UX design a space where empathy, logic, and creativity meet to solve real problems.
                     </p>
                     <p>I believe design is not just about aesthetics, but about clarity.
                         Clarity in complex systems, clarity in decisions, and clarity in user journeys.</p>
 
-                    <p>Through hands-on experience in bootcamps, real projects, and award-winning challenges, I’ve worked across the full design process — from research and problem framing to wireframing, prototyping, and usability testing. Leading projects like K’Parkir, which improved user flow efficiency by 25% and earned 1st place at a national showcase, strengthened my belief that good design should always be measurable and meaningful.
+                    <p>Through hands-on experience in bootcamps, real projects, and award-winning challenges, I’ve worked across the full design process from research and problem framing to wireframing, prototyping, and usability testing. Leading projects like K’Parkir, which improved user flow efficiency by 25% and earned 1st place at a national showcase, strengthened my belief that good design should always be measurable and meaningful.
 
                         The moments you see here aren’t just snapshots.
-                        They represent iterations, failures, learnings, and growth — each one shaping how I approach design today.
+                        They represent iterations, failures, learnings, and growth each one shaping how I approach design today.
 
                         I design digital experiences that feel human, intentional, and impactful.
                         And I’m driven by one simple goal: to build products people don’t have to think twice about using.</p>

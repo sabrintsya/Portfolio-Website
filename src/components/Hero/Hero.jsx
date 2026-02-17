@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { getImageUrl } from "../../utils";
 import styles from "./Hero.module.css";
 
 export const Hero = () => {
+  const [isZoomed, setIsZoomed] = useState(false);
+
   return (
     <section className={styles.container}>
       <div className={styles.heroCenter}>
@@ -10,9 +12,11 @@ export const Hero = () => {
         <div className={styles.nameRow}>
           <h1 className={styles.name}>Sabrina Natasya Bilbina</h1>
 
-          <div className={styles.photoWrap}>
+          <div 
+            className={`${styles.photoWrap} ${isZoomed ? styles.zoomed : ""}`}
+            onClick={() => setIsZoomed(!isZoomed)}
+          >
             <div className={styles.photoGlow}></div>
-            
             <img
               src={getImageUrl("hero/Picture.png")}
               alt="Sabrina"
