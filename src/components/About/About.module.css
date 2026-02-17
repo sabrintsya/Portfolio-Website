@@ -42,7 +42,7 @@
 .polaroid {
   background: #fff;
   padding: 8px 8px 20px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 12px 30px rgba(159, 6, 100, 0.33);
   cursor: pointer;
 
   transform: rotate(var(--rotate));
@@ -73,7 +73,7 @@
 
 .polaroid.active {
   transform: scale(1.25) translateY(-10px) rotate(0deg);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 30px 80px rgba(244, 114, 166, 0.25);
   z-index: 5;
 }
 

@@ -12,6 +12,7 @@ export const Hero = () => {
 
           <div className={styles.photoWrap}>
             <div className={styles.photoGlow}></div>
+            
             <img
               src={getImageUrl("hero/Picture.png")}
               alt="Sabrina"
