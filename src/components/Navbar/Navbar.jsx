@@ -4,7 +4,7 @@ import styles from "./Navbar.module.css";
 import { getImageUrl } from "../../utils";
 
 import { Link } from "react-router-dom";
-import cvFile from "../../../assets/cv/Sabrina Natasya Bilbina_UI_UX Designer_CV.pdf";
+
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -47,15 +47,6 @@ export const Navbar = () => {
           <li onClick={() => setMenuOpen(false)}>
   <Link to="/about">About</Link>
 </li>
-
-          <li onClick={() => setMenuOpen(false)}>
-            <a
-              href={cvFile}
-              download="Sabrina_Natasya_Bilbina_UI_UX_Designer_CV.pdf"
-            >
-              Resume
-            </a>
-          </li>
         </ul>
 
       </div>
