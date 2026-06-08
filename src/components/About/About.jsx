@@ -8,67 +8,173 @@ import img3 from "../../../assets/about/polaroid-3.png";
 import img4 from "../../../assets/about/polaroid-4.png";
 
 const polaroids = [
-    { src: img1, rotate: "-4deg" },
-    { src: img2, rotate: "3deg" },
-    { src: img3, rotate: "-2deg" },
-    { src: img4, rotate: "5deg" },
+  { src: img1, rotate: "-4deg", caption: "the spark" },
+  { src: img2, rotate: "3deg",  caption: "the idea"  },
+  { src: img3, rotate: "-2deg", caption: "the win"   },
+  { src: img4, rotate: "5deg",  caption: "the growth"},
+];
+
+const values = [
+  {
+    icon: "🔍",
+    title: "Research & Problem Framing",
+    desc: "I dig into the why before the how. Every design decision is rooted in real insight.",
+  },
+  {
+    icon: "🎨",
+    title: "Wireframing & Prototyping",
+    desc: "From rough sketches to interactive flows, I bring ideas to life fast and intentionally.",
+  },
+  {
+    icon: "🧪",
+    title: "Usability Testing",
+    desc: "I test, iterate, and measure. Good design should always be measurable and meaningful.",
+  },
+];
+
+const tags = [
+  "Human-Centered",
+  "Empathy-Driven",
+  "Systems Thinking",
+  "K'Parkir · 1st Place 🏆",
+  "Data-Informed",
+  "Intentional Design",
+  "End-to-End Process",
+  "Always Iterating",
 ];
 
 const About = () => {
-    const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
 
-    return (
-        <>
-            <main className={styles.about}>
-                <h1>About</h1>
+  return (
+    <>
+      <main className={styles.about}>
 
-                <p className={styles.lead}>
-                    I didn’t start my journey in design by drawing beautiful screens.
-                    I started by trying to understand people.   </p>
-                    <p>From manufacturing floors to digital products, I learned early that systems only work when they respect human behavior. That mindset led me to UI/UX design a space where empathy, logic, and creativity meet to solve real problems.
-                    </p>
-                    <p>I believe design is not just about aesthetics, but about clarity.
-                        Clarity in complex systems, clarity in decisions, and clarity in user journeys.</p>
+        {/* ── Deco line ── */}
+        <div className={styles.decoLine}>
+          <span>UI / UX Designer</span>
+        </div>
 
-                    <p>Through hands-on experience in bootcamps, real projects, and award-winning challenges, I’ve worked across the full design process from research and problem framing to wireframing, prototyping, and usability testing. Leading projects like K’Parkir, which improved user flow efficiency by 25% and earned 1st place at a national showcase, strengthened my belief that good design should always be measurable and meaningful.
+        {/* ── Heading ── */}
+        <h1>
+          Hi, I'm a <em>designer</em><br />
+          who thinks in humans.
+        </h1>
+        <span className={styles.subtitleTag}>✦ Portfolio · About Me</span>
 
-                        The moments you see here aren’t just snapshots.
-                        They represent iterations, failures, learnings, and growth each one shaping how I approach design today.
+        {/* ── Lead quote ── */}
+        <p className={styles.lead}>
+          I didn't start my journey in design by drawing beautiful screens.
+          I started by trying to understand{" "}
+          <span style={{ color: "#c44f8a" }}>people</span>.
+        </p>
 
-                        I design digital experiences that feel human, intentional, and impactful.
-                        And I’m driven by one simple goal: to build products people don’t have to think twice about using.</p>
+        {/* ── Origin ── */}
+        <p className={styles.sectionLabel}>The Origin</p>
+        <p>
+          From manufacturing floors to digital products, I learned early that
+          systems only work when they respect human behavior. That mindset led
+          me to UI/UX design — a space where empathy, logic, and creativity
+          meet to solve real problems.
+        </p>
+        <p>
+          I believe design is not just about aesthetics, but about{" "}
+          <span className={styles.highlightPill}>clarity</span>. Clarity in
+          complex systems, clarity in decisions, and clarity in user journeys.
+        </p>
 
-                {/* Polaroid */}
-                <section
-                    className={`${styles.polaroidWrapper} ${activeIndex !== null ? styles.activeBackground : ""
-                        }`}
-                    onClick={() => setActiveIndex(null)}
-                >
-                    <div className={styles.pinkBlurGlobal} />
+        {/* ── Stats ── */}
+        <div className={styles.statStrip}>
+          <div className={styles.statItem}>
+            <div className={styles.statNum}>25%</div>
+            <div className={styles.statDesc}>Flow efficiency gained</div>
+          </div>
+          <div className={styles.statItem}>
+            <div className={styles.statNum}>1st</div>
+            <div className={styles.statDesc}>National showcase winner</div>
+          </div>
+          <div className={styles.statItem}>
+            <div className={styles.statNum}>∞</div>
+            <div className={styles.statDesc}>Problems to solve</div>
+          </div>
+        </div>
 
-                    <div className={styles.polaroidSection}>
-                        {polaroids.map((item, index) => (
-                            <div
-                                key={index}
-                                className={`${styles.polaroid} ${activeIndex === index ? styles.active : ""
-                                    } ${activeIndex !== null && activeIndex !== index ? styles.dim : ""}`}
-                                style={{ "--rotate": item.rotate }}
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    setActiveIndex(index);
-                                }}
-                            >
-                                <img src={item.src} alt="Polaroid moment" />
-                            </div>
-                        ))}
-                    </div>
-                </section>
-            </main>
+        {/* ── What I Do ── */}
+        <p className={styles.sectionLabel}>What I Do</p>
+        <ul className={styles.valueList}>
+          {values.map((v, i) => (
+            <li key={i}>
+              <div className={styles.vIcon}>{v.icon}</div>
+              <div>
+                <strong>{v.title}</strong> — {v.desc}
+              </div>
+            </li>
+          ))}
+        </ul>
 
-            <Contact />
-        </>
-    );
+        {/* ── Quote block ── */}
+        <div className={styles.quoteBlock}>
+          <p className={styles.quoteText}>
+            The moments you see here aren't just snapshots — they represent
+            iterations, failures, learnings, and growth. Each one shaping how
+            I approach design today.
+          </p>
+        </div>
+
+        {/* ── Design DNA ── */}
+        <p className={styles.sectionLabel}>My Design DNA</p>
+        <div className={styles.tagCloud}>
+          {tags.map((tag) => (
+            <span key={tag} className={styles.tag}>{tag}</span>
+          ))}
+        </div>
+
+        {/* ── Closing ── */}
+        <p className={styles.closingLine}>
+          I design digital experiences that feel{" "}
+          <strong>human, intentional, and impactful</strong>. Driven by one
+          simple goal: to build products people don't have to think twice
+          about using.
+        </p>
+
+        {/* ── Polaroids ── */}
+        <section
+          className={`${styles.polaroidWrapper} ${
+            activeIndex !== null ? styles.activeBackground : ""
+          }`}
+          onClick={() => setActiveIndex(null)}
+        >
+          <div className={styles.pinkBlurGlobal} />
+          <p className={styles.polaroidLabel}>✦ moments that made me ✦</p>
+
+          <div className={styles.polaroidSection}>
+            {polaroids.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.polaroid} ${
+                  activeIndex === index ? styles.active : ""
+                } ${
+                  activeIndex !== null && activeIndex !== index
+                    ? styles.dim
+                    : ""
+                }`}
+                style={{ "--rotate": item.rotate }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveIndex(index === activeIndex ? null : index);
+                }}
+              >
+                <img src={item.src} alt={`Moment — ${item.caption}`} />
+                <span className={styles.polaroidCaption}>{item.caption}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
+
+      <Contact />
+    </>
+  );
 };
-
 
 export default About;
