@@ -1,76 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap");
+@import "../../vars.css";
+
+/* ===========================
+   ROW LAYOUT
+=========================== */
 .row {
   display: grid;
-  grid-template-columns: 1.2fr 2fr;
-  gap: 3rem;
+  grid-template-columns: 1.1fr 2fr;
+  gap: 3.5rem;
   align-items: center;
+  padding: 40px 44px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(244, 143, 177, 0.25);
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  transition: box-shadow 0.35s ease, transform 0.35s ease, border-color 0.35s ease;
+  position: relative;
+  overflow: hidden;
 }
 
+.row::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(252, 228, 236, 0.25), rgba(255, 240, 245, 0.1));
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.row:hover {
+  box-shadow: 0 16px 48px rgba(233, 30, 140, 0.1);
+  transform: translateY(-4px);
+  border-color: rgba(233, 30, 140, 0.3);
+}
+
+.row:hover::before {
+  opacity: 1;
+}
+
+/* ===========================
+   LEFT — TEXT
+=========================== */
 .left {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
+.title {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #880e4f;
+}
+
+.description {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: #ad5d7a;
+}
+
+/* ===========================
+   TYPE BADGE
+=========================== */
+.typeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(244, 143, 177, 0.15);
+  border: 1px solid rgba(244, 143, 177, 0.4);
+  border-radius: 100px;
+  padding: 4px 12px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #c2185b;
+  width: fit-content;
+  margin-bottom: 4px;
+}
+
+.typeDot {
+  width: 5px;
+  height: 5px;
+  background: #e91e8c;
+  border-radius: 50%;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+.links {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.primary,
+.link {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* primary — filled gradient */
+.primary {
+  background: linear-gradient(135deg, #e91e8c, #f48fb1);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(233, 30, 140, 0.25);
+}
+
+.primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #c2185b, #e91e8c);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+}
+
+.primary:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 22px rgba(233, 30, 140, 0.35);
+}
+
+.primary:hover::before {
+  opacity: 1;
+}
+
+.primary span {
+  position: relative;
+  z-index: 1;
+}
+
+/* secondary — outlined */
+.link {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid rgba(233, 30, 140, 0.35);
+  color: #c2185b;
+  backdrop-filter: blur(8px);
+}
+
+.link:hover {
+  background: rgba(252, 228, 236, 0.6);
+  border-color: #e91e8c;
+  color: #880e4f;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(233, 30, 140, 0.12);
+}
+
+/* ===========================
+   RIGHT — IMAGE
+=========================== */
 .right {
-  background: linear-gradient(180deg, var(--color-third), var(--color-secondary));
-  border-radius: 16px;
+  background: linear-gradient(145deg, #fff0f5, #fce8f0);
+  border-radius: 20px;
   padding: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+  border: 1px solid rgba(244, 143, 177, 0.2);
+  box-shadow: 0 8px 32px rgba(233, 30, 140, 0.08);
+  position: relative;
+  z-index: 1;
+  transition: box-shadow 0.35s ease;
+}
+
+.row:hover .right {
+  box-shadow: 0 12px 40px rgba(233, 30, 140, 0.14);
 }
 
 .image {
   width: 100%;
   border-radius: 12px;
   object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
-.title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: var(--color-primary);
+.row:hover .image {
+  transform: scale(1.02);
 }
 
-.description {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  opacity: .85;
-}
-
-.links {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.primary,
-.link {
-  padding: 10px 24px;
-  border-radius: 100px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: .25s;
-}
-
-.primary {
-  background: var(--color-primary);
-  color: var(--color-text);
-}
-
-.link {
-  border: 2px solid var(--color-primary);
-  color: var(--color-primary);
-  background: transparent;
-}
-
-.primary:hover,
-.link:hover {
-  transform: translateY(-3px);
-}
-
+/* ===========================
+   RESPONSIVE — TABLET / MOBILE
+=========================== */
 @media (max-width: 900px) {
   .row {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 28px 24px;
   }
 
   .right {
@@ -79,15 +215,36 @@
   }
 
   .image {
-    max-height: 300px;
+    max-height: 280px;
     object-fit: contain;
   }
 
   .title {
-    font-size: 1.7rem;
+    font-size: 1.65rem;
   }
 
   .description {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .row {
+    padding: 20px 18px;
+    border-radius: 18px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .links {
+    gap: 8px;
+  }
+
+  .primary,
+  .link {
+    font-size: 0.72rem;
+    padding: 9px 18px;
   }
 }
