@@ -1,44 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Quicksand:wght@400;500;600;700&display=swap');
+
+/* ============================================
+   Scoped design tokens — pink & sage, soft + clean
+   ============================================ */
 .container {
+  --color-primary: #ff6fa1;        /* signature blossom pink */
+  --color-primary-soft: #ffe1ec;   /* pale pink wash */
+  --color-secondary: #b6618c;      /* deeper mauve for sub-headings */
+  --color-sage: #a8d8c2;           /* soft green accent */
+  --color-sage-soft: #e3f5ec;
+  --color-text: #5a4a55;           /* warm plum-grey body text */
+  --color-muted: #9b8b96;
+  --color-card: #ffffff;
+  --color-bg: #fff7fa;
+
   max-width: 860px;
   margin: 100px auto 0;
-  padding: 2.5rem;
+  padding: 3rem;
   color: var(--color-text);
   min-height: 100vh;
   line-height: 1.8;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  font-family: 'Quicksand', sans-serif;
+  background: var(--color-bg);
+  border-radius: 28px;
+  box-shadow: 0 12px 40px rgba(255, 111, 161, 0.1);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
 }
 
+/* soft ambient blobs — the one decorative flourish, kept quiet */
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.container::before {
+  width: 320px;
+  height: 320px;
+  background: var(--color-primary-soft);
+  top: -120px;
+  right: -100px;
+  opacity: 0.8;
+}
+
+.container::after {
+  width: 260px;
+  height: 260px;
+  background: var(--color-sage-soft);
+  bottom: 10%;
+  left: -120px;
+  opacity: 0.7;
+}
+
+/* ============================================
+   Back button
+   ============================================ */
 .backButton {
-  background: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary), #ff9ec1);
   color: #fff;
   border: none;
-  padding: 12px 28px;
+  padding: 12px 30px;
   border-radius: 50px;
   cursor: pointer;
-  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95rem;
   font-weight: 600;
-  margin-bottom: 2rem;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
-  transition: all 0.3s ease;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 6px 16px rgba(255, 111, 161, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .backButton:hover {
-  transform: translateY(-2px) scale(1.02);
-  background: #fff;
-  color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(255, 111, 161, 0.32);
 }
 
+/* ============================================
+   Header
+   ============================================ */
 .header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.header::before {
+  content: "❀";
+  display: block;
+  font-size: 1.6rem;
+  color: var(--color-sage);
+  margin-bottom: 0.75rem;
 }
 
 .title {
-  font-size: 2.4rem;
+  font-family: 'Fraunces', serif;
+  font-size: 2.6rem;
   font-weight: 700;
   color: var(--color-primary);
   margin-bottom: 1rem;
@@ -47,64 +113,88 @@
 }
 
 .subtitle {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
   font-size: 1.2rem;
-  color: #666;
-  margin-bottom: 2.2rem;
-  max-width: 600px;
+  font-weight: 500;
+  color: var(--color-muted);
+  margin-bottom: 2.5rem;
+  max-width: 580px;
   margin-inline: auto;
-  opacity: 0.95;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .heroImage {
   width: 100%;
   max-width: 620px;
   height: auto;
-  border-radius: 16px;
-  box-shadow: 0 10px 24px rgba(255, 105, 180, 0.2);
+  border-radius: 20px;
+  border: 6px solid var(--color-card);
+  box-shadow: 0 14px 32px rgba(255, 111, 161, 0.22);
   transition: transform 0.4s ease;
 }
 
 .heroImage:hover {
-  transform: scale(1.03);
+  transform: scale(1.015);
 }
 
+/* ============================================
+   Content / sections — soft cards instead of dividers
+   ============================================ */
 .caseStudyContent {
   margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
 }
 
 .section {
-  margin-bottom: 3rem;
-  padding-bottom: 2.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: var(--color-card);
+  margin-bottom: 2rem;
+  padding: 2.25rem 2.5rem;
+  border-radius: 22px;
+  box-shadow: 0 6px 24px rgba(255, 111, 161, 0.08);
+  border: 1px solid rgba(255, 111, 161, 0.08);
 }
 
 .section:last-child {
-  border-bottom: none;
+  margin-bottom: 0;
 }
 
 .section h2 {
+  display: inline-block;
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
   color: var(--color-primary);
-  font-size: 1.9rem;
-  margin-bottom: 1.5rem;
-  border-left: 5px solid var(--color-primary);
-  padding-left: 1rem;
-  background: linear-gradient(to right, #ffe6f0, transparent);
-  border-radius: 4px;
+  font-size: 1.55rem;
+  margin: 0 0 1.5rem 0;
+  padding: 0.4rem 1.4rem;
+  background: linear-gradient(135deg, var(--color-primary-soft), var(--color-sage-soft));
+  border-radius: 50px;
 }
 
 .section h3 {
+  font-family: 'Quicksand', sans-serif;
   color: var(--color-secondary);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 700;
   margin: 1.5rem 0 1rem 0;
+  padding-left: 0.9rem;
+  border-left: 3px solid var(--color-sage);
+}
+
+.section h4 {
+  font-family: 'Quicksand', sans-serif;
+  color: var(--color-secondary);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 1.25rem 0 0.75rem 0;
 }
 
 .section p {
   margin-bottom: 1rem;
-  font-size: 1.1rem;
-  color: #555;
+  font-size: 1.05rem;
+  color: var(--color-text);
 }
-
 
 .section ul {
   list-style-type: none;
@@ -113,28 +203,32 @@
 }
 
 .section li {
-  padding: 0.6rem 0;
+  padding: 0.55rem 0;
   position: relative;
-  padding-left: 2rem;
-  font-size: 1.1rem;
-  color: #444;
+  padding-left: 1.9rem;
+  font-size: 1.05rem;
+  color: var(--color-text);
 }
 
 .section li::before {
   content: "✿";
   color: var(--color-primary);
   position: absolute;
-  left: 0.6rem;
-  font-size: 1rem;
+  left: 0;
+  top: 0.55rem;
+  font-size: 0.95rem;
 }
 
 .section strong {
   color: var(--color-primary);
-  font-weight: 600;
+  font-weight: 700;
 }
 
+/* ============================================
+   Images & captions
+   ============================================ */
 .imageWithCaption {
-  margin: 2rem 0;
+  margin: 1.75rem 0;
   text-align: center;
 }
 
@@ -142,18 +236,18 @@
   width: 100%;
   max-width: 720px;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(255, 105, 180, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(255, 111, 161, 0.16);
   transition: transform 0.3s ease;
 }
 
 .contentImage:hover {
-  transform: scale(1.02);
+  transform: scale(1.015);
 }
 
 .caption {
-  font-size: 0.95rem;
-  color: #888;
+  font-size: 0.9rem;
+  color: var(--color-muted);
   margin-top: 0.6rem;
   font-style: italic;
 }
@@ -162,96 +256,140 @@
   color: var(--color-primary);
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease, color 0.25s ease;
 }
 
 .detailLink:hover {
-  text-decoration: underline;
+  border-color: var(--color-primary);
   color: var(--color-secondary);
 }
 
+/* ============================================
+   Conclusion
+   ============================================ */
 .conclusion {
-  background: linear-gradient(135deg, #fff0f6 0%, #ffe6f0 100%);
-  padding: 2.5rem;
-  border-radius: 16px;
-  margin: 3.5rem 0;
-  border-left: 6px solid var(--color-primary);
-  box-shadow: 0 6px 20px rgba(255, 192, 203, 0.25);
+  background: linear-gradient(135deg, var(--color-primary-soft) 0%, var(--color-sage-soft) 100%);
+  padding: 2.5rem 2.75rem;
+  border-radius: 22px;
+  margin: 3rem 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.conclusion::before {
+  content: "❞";
+  position: absolute;
+  top: -1.2rem;
+  right: 1.5rem;
+  font-family: 'Fraunces', serif;
+  font-size: 6rem;
+  color: rgba(255, 111, 161, 0.18);
+  line-height: 1;
 }
 
 .conclusion h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
   color: var(--color-primary);
-  margin-bottom: 1.2rem;
-  border-left: none;
-  padding-left: 0;
+  margin-bottom: 1.1rem;
+  font-size: 1.5rem;
 }
 
 .conclusion p {
-  font-size: 1.15rem;
-  line-height: 1.7;
+  font-size: 1.1rem;
+  line-height: 1.8;
   margin: 0;
-  color: #444;
+  color: var(--color-text);
+  position: relative;
+  z-index: 1;
 }
 
+.conclusion strong {
+  color: var(--color-secondary);
+}
+
+/* ============================================
+   Bottom actions
+   ============================================ */
 .actions {
   display: flex;
   gap: 1.2rem;
   justify-content: center;
   margin-top: 3rem;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
 .button,
 .buttonSecondary {
-  padding: 12px 28px;
+  padding: 12px 30px;
   border-radius: 100px;
   text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  transition: all 0.25s ease;
   text-align: center;
   display: inline-block;
   font-size: 1rem;
 }
 
 .button {
-  background: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary), #ff9ec1);
   color: #fff;
-  box-shadow: 0 4px 16px rgba(255, 105, 180, 0.3);
+  box-shadow: 0 6px 18px rgba(255, 111, 161, 0.3);
 }
 
 .buttonSecondary {
-  background: transparent;
+  background: #fff;
   color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  border: 2px solid var(--color-primary-soft);
 }
 
 .button:hover,
 .buttonSecondary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(255, 105, 180, 0.25);
+  box-shadow: 0 10px 22px rgba(255, 111, 161, 0.25);
 }
 
+.buttonSecondary:hover {
+  border-color: var(--color-primary);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
 @media (max-width: 768px) {
   .container {
     padding: 1.5rem;
     margin-top: 80px;
-    box-shadow: none;
+    border-radius: 18px;
   }
 
   .title {
-    font-size: 1.9rem;
+    font-size: 2rem;
   }
 
   .subtitle {
-    font-size: 1.05rem;
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 1.5rem 1.5rem;
+    border-radius: 18px;
   }
 
   .section h2 {
-    font-size: 1.45rem;
+    font-size: 1.3rem;
   }
 
   .section h3 {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
+  }
+
+  .conclusion {
+    padding: 1.75rem 1.5rem;
   }
 
   .actions {
@@ -266,3 +404,14 @@
   }
 }
 
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .backButton,
+  .heroImage,
+  .contentImage,
+  .button,
+  .buttonSecondary,
+  .detailLink {
+    transition: none;
+  }
+}
