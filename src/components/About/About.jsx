@@ -4,8 +4,8 @@ import { Contact } from "../Contact/Contact";
 
 import img1 from "../../../assets/about/picture1.jpg";
 import img2 from "../../../assets/about/picture2.jpg";
-import img3 from "../../../assets/about/picture3.jpg";
-import img4 from "../../../assets/about/picture4.jpg";
+import img3 from "../../../assets/about/picture3.png";
+import img4 from "../../../assets/about/picture4.png";
 
 const polaroids = [
   { src: img1, rotate: "-4deg", caption: "the spark" },
