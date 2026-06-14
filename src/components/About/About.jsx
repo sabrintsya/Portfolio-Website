@@ -74,7 +74,7 @@ const About = () => {
         <p>
           From manufacturing floors to digital products, I learned early that
           systems only work when they respect human behavior. That mindset led
-          me to UI/UX design — a space where empathy, logic, and creativity
+          me to UI/UX design  a space where empathy, logic, and creativity
           meet to solve real problems.
         </p>
         <p>
@@ -115,7 +115,7 @@ const About = () => {
         {/* ── Quote block ── */}
         <div className={styles.quoteBlock}>
           <p className={styles.quoteText}>
-            The moments you see here aren't just snapshots — they represent
+            The moments you see here aren't just snapshots they represent
             iterations, failures, learnings, and growth. Each one shaping how
             I approach design today.
           </p>
