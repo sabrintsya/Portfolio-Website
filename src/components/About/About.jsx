@@ -2,10 +2,10 @@ import { useState } from "react";
 import styles from "./About.module.css";
 import { Contact } from "../Contact/Contact";
 
-import img1 from "../../../assets/about/polaroid-1.png";
-import img2 from "../../../assets/about/polaroid-2.png";
-import img3 from "../../../assets/about/polaroid-3.png";
-import img4 from "../../../assets/about/polaroid-4.png";
+import img1 from "../../../assets/about/picture1.jpg";
+import img2 from "../../../assets/about/picture2.jpg";
+import img3 from "../../../assets/about/picture3.JPG";
+import img4 from "../../../assets/about/picture4.JPG";
 
 const polaroids = [
   { src: img1, rotate: "-4deg", caption: "the spark" },
