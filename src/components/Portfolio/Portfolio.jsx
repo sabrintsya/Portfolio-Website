@@ -12,6 +12,15 @@ export const Portfolio = ({ showAll = false }) => {
 
   const portfolio = [
     {
+      id: "company-website",
+      title: "Company Website Design",
+      imageSrc: "portfolio/Website.png",
+      description:
+        "A company website I designed during my time working as a UI/UX Designer. Handled the full visual design including layout, typography, and brand consistency across pages.",
+      type: "company",
+      role: "uiux",
+    },
+    {
       id: "kparkir",
       title: "K'Parkir",
       imageSrc: "portfolio/K'parkir.png",
@@ -184,9 +193,8 @@ export const Portfolio = ({ showAll = false }) => {
           ].map(({ key, label }) => (
             <button
               key={key}
-              className={`${styles.filterButton} ${
-                activeFilter === key ? styles.active : ""
-              }`}
+              className={`${styles.filterButton} ${activeFilter === key ? styles.active : ""
+                }`}
               onClick={() => setActiveFilter(key)}
             >
               {label}

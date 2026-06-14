@@ -6,6 +6,7 @@ const TYPE_LABELS = {
   "case-study": "Case Study",
   github: "Dev Project",
   presentation: "Presentation",
+  company: "Company Work",
 };
 
 export const PortfolioCard = ({
@@ -25,7 +26,6 @@ export const PortfolioCard = ({
         </button>
       );
     }
-
     if (type === "github") {
       return (
         <a href={source} className={styles.link} target="_blank" rel="noreferrer">
@@ -33,7 +33,6 @@ export const PortfolioCard = ({
         </a>
       );
     }
-
     if (type === "presentation") {
       return (
         <a href={demo} className={styles.link} target="_blank" rel="noreferrer">
@@ -41,15 +40,19 @@ export const PortfolioCard = ({
         </a>
       );
     }
-
+    if (type === "company") {
+      return (
+        <a href="https://mez.ink/zofjabarkrw" className={styles.link} target="_blank" rel="noreferrer">
+          Contact Me to Learn More
+        </a>
+      );
+    }
     return null;
   };
 
   return (
     <div className={styles.row}>
-      {/* LEFT — text */}
       <div className={styles.left}>
-        {/* type badge */}
         {TYPE_LABELS[type] && (
           <div className={styles.typeBadge}>
             <span className={styles.typeDot} />
@@ -61,14 +64,15 @@ export const PortfolioCard = ({
         <p className={styles.description}>{description}</p>
 
         <div className={styles.links}>
-          <a href={demo} className={styles.primary} target="_blank" rel="noreferrer">
-            <span>Demo</span>
-          </a>
+          {type !== "company" && (
+            <a href={demo} className={styles.primary} target="_blank" rel="noreferrer">
+              <span>Demo</span>
+            </a>
+          )}
           {renderSecondButton()}
         </div>
       </div>
 
-      {/* RIGHT — image */}
       <div className={styles.right}>
         <img src={getImageUrl(imageSrc)} alt={title} className={styles.image} />
       </div>
