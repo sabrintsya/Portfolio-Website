@@ -49,7 +49,7 @@ const CaseStudy = () => {
             </a>
           </p>
         </div>
-        <p>The fundamental issue we sought to address was the <strong>disrupted listening experience caused by content friction and availability gaps</strong> on the Spotify platform. Through extensive UX research, we confirmed that a major pain point for users was the unpredictable disappearance of songs from their personal playlists—often referred to as "greyed out" songs—due to external factors such as licensing limitations or slow content distribution.</p>
+        <p>The fundamental issue we sought to address was the <strong>disrupted listening experience caused by content friction and availability gaps</strong> on the Spotify platform. Through extensive UX research, we confirmed that a major pain point for users was the unpredictable disappearance of songs from their personal playlists often referred to as "greyed out" songs due to external factors such as licensing limitations or slow content distribution.</p>
         
         <h3>The consequences of this problem were significant:</h3>
         <ul>
