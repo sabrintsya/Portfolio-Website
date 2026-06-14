@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+.section {
+  padding: 80px 8% 64px;
+  background: #fff;
+  font-family: 'DM Sans', sans-serif;
+  overflow: hidden;
+}
+
+/* === Header === */
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #D4357F;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 10px;
+}
+
+.tag::before {
+  content: '';
+  width: 22px;
+  height: 2px;
+  background: linear-gradient(to right, #D4357F, #FF90BB);
+  display: block;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 900;
+  color: #1a1a1a;
+  margin: 0 0 10px;
+  line-height: 1.1;
+}
+
+.accent {
+  color: transparent;
+  background: linear-gradient(90deg, #D4357F, #FF90BB, #D4357F);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
+  font-style: italic;
+}
+
+@keyframes shine {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.sub {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+  max-width: 380px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+/* === Social Button === */
+.socialBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border: 1.5px solid #F4C0D1;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #D4357F;
+  text-decoration: none;
+  background: #FBEAF0;
+  transition: background 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.socialBtn:hover {
+  background: #FFD6E9;
+  transform: translateY(-2px);
+}
+
+/* === Nav Buttons === */
+.navBtns {
+  display: flex;
+  gap: 8px;
+}
+
+.navBtn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid #F4C0D1;
+  background: white;
+  cursor: pointer;
+  font-size: 20px;
+  color: #D4357F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+  line-height: 1;
+}
+
+.navBtn:hover:not(:disabled) {
+  background: #FBEAF0;
+  transform: scale(1.05);
+}
+
+.navBtn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* === Carousel === */
+.carouselWrap {
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 0 -4px;
+  padding: 4px;
+}
+
+.track {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* === Card === */
+.card {
+  min-width: 260px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.imgWrap {
+  position: relative;
+  width: 260px;
+  height: 320px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #FFD6E9, #FFECF4);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.card:hover .img {
+  transform: scale(1.04);
+}
+
+/* Hover overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(212, 53, 127, 0.75) 0%,
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 18px;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.overlayLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.3px;
+}
+
+.cardLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  margin: 0;
+  padding: 0 4px;
+}
+
+/* === Dots === */
+.dots {
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #F4C0D1;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s, width 0.3s;
+}
+
+.dotActive {
+  background: #D4357F;
+  width: 20px;
+  border-radius: 4px;
+}
+
+/* === Mobile === */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 5% 48px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .card {
+    min-width: 200px;
+  }
+
+  .imgWrap {
+    width: 200px;
+    height: 250px;
+  }
+}

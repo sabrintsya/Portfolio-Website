@@ -4,8 +4,10 @@ import { Hero } from "./components/Hero/Hero";
 import { Portfolio } from "./components/Portfolio/Portfolio";
 import { Contact } from "./components/Contact/Contact";
 import CaseStudy from "./components/CaseStudy/CaseStudy";
+import { GraphicDesign } from "./components/Graphic Design/GraphicDesign";
 import AllWorks from "./components/pages/AllWorks";
 import  About  from "./components/About/About";
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
           element={
             <>
               <Hero />
+              <GraphicDesign />
               <Portfolio />
               <Contact />
             </>
@@ -35,6 +38,7 @@ function App() {
         
       </Routes>
     </Router>
+    
   );
 }
 
