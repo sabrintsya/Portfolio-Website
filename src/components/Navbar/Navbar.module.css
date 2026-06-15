@@ -1,35 +1,48 @@
 @import "../../vars.css";
 
+/* ── Base / Desktop (> 900px) ── */
+
 .navbar {
   position: fixed;
   top: 32px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
-
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
-.title {
-    font-size: 30px;
-    font-weight: 600;
-    text-decoration: none;
-    color: var(--color-primary);
-}
-
 .menu {
   display: flex;
+  align-items: center;
   padding: 14px 36px;
   border-radius: 999px;
-
   background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 8px 40px rgba(255, 79, 163, 0.15);
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease, padding 0.3s ease;
+}
 
-  transition: all 0.4s ease;
+.scrolled {
+  box-shadow: 0 8px 48px rgba(255, 79, 163, 0.28);
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+/* Hamburger — hidden on desktop */
+.menuBtn {
+  display: none;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
 .menuItems {
@@ -37,34 +50,100 @@
   gap: 40px;
   list-style: none;
   align-items: center;
-}
-
-
-.menuBtn {
-    display: none;
+  margin: 0;
+  padding: 0;
 }
 
 .menuItems a {
-    font-size: 22px;
-    color: var(--color-text);
-    text-decoration: none;
+  font-size: 22px;
+  color: var(--color-text);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
 }
 
 .menuItems a:hover {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
-@media screen and (max-width: 640px) {
+/* ── Tablet: 641px – 900px ── */
+@media screen and (min-width: 641px) and (max-width: 900px) {
   .menu {
-    padding: 12px 20px;
+    padding: 12px 28px;
   }
 
   .menuItems {
-    justify-content: center;
-    gap: 16px;
+    gap: 28px;
   }
 
   .menuItems a {
+    font-size: 17px;
+  }
+}
+
+/* ── Mobile: ≤ 640px ── */
+@media screen and (max-width: 640px) {
+  .navbar {
+    top: 20px;
+  }
+
+  /* Closed: pill kecil isi hamburger icon */
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 18px;
+    border-radius: 999px;
+    gap: 0;
+  }
+
+  /* Open: pill mengembang jadi card */
+  .menuExpanded {
+    border-radius: 20px;
+    padding: 16px 36px;
+  }
+
+  /* Hamburger muncul di mobile */
+  .menuBtn {
+    display: block;
+  }
+
+  /* Menu items tersembunyi by default, animasi max-height + opacity */
+  .menuItems {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    gap: 0;
+    margin-top: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  }
+
+  /* Saat open */
+  .menuOpen {
+    max-height: 300px;
+    opacity: 1;
+    gap: 4px;
+    margin-top: 14px;
+    pointer-events: auto;
+  }
+
+  .menuItems li {
+    width: 100%;
+  }
+
+  .menuItems a {
+    display: block;
     font-size: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 79, 163, 0.1);
+  }
+
+  .menuItems li:last-child a {
+    border-bottom: none;
+    padding-bottom: 2px;
   }
 }
